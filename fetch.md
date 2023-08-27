@@ -179,7 +179,6 @@ while($teacher = $objectPDOStatement->fetch(PDO::FETCH_ASSOC)){
     Génial ! Nous avons enfin le résultat que nous souhaitions ! :)
     détaillons maintenant cette boucle while : 
     
-    
     while($teacher = $objectPDOStatement->fetch(PDO::FETCH_ASSOC)){
         echo '<pre>'; print_r($teacher); echo '</pre>';
     }

@@ -4,7 +4,7 @@
 
 # 2. Dans le déclaration des routes dans le fichier public/index.php, vous faites appel aux controller sans préciser le namespace, de ce fait le controller n'est pas reconnu, dans l'idéal, il aurait été judicieux de déclarer une variable contenant le nom du namepace et de l'inclure dans chaque déclaration de route, cela évite la redondance et si pour X raison, le namespace venait à être modifié, une seule variable serait impactée.
 
-# 3. De plus, vous avez déclaré l'ensemble des routes dans le fichier public/index.php, il serait judiceux de déclarer les routes dans un fichier externe (ex : app/routes.php) et de l'inclure directement dans le fichier public/index.php, ce qui permet d'avoir des fichiers moins lourd, plus clair et mieux organisé.
+# 3. De plus, vous avez déclaré l'ensemble des routes dans le fichier public/index.php, il serait judiceux de déclarer les routes dans un fichier externe (ex : routes.php) et de l'inclure directement dans le fichier public/index.php, ce qui permet d'avoir des fichiers moins lourd, plus clair et mieux organisé.
 
 # 4. Il y a différentes erreurs dans la déclaration des routes, pour rappel, pour réaliser le mapping, la méthode map() issue de la classe AltoRouter() attend 5 arguments : 
 
@@ -30,7 +30,7 @@ $router->map(
     'student_list' ==> la convention de nommage de le route n'est pas respectée
 );
 
-# Vous avez déclarer les routes '/404' et '/403', ces routes ne doivent pas être déclarées avec le reste du mapping, ces routes interviennent en cas de route érronés donc page non trouvée (erreur 404) ou pour une route interdite (erreur 403), par exemple une route uniquement accessible à un administrateur du site, ces routes sont déclenchées en fonction de l'action de l'utilisateur sur le site
+# Vous avez déclarer les routes '/404' et '/403', ces routes ne doivent pas être déclarées avec le reste du mapping, ces routes interviennent en cas de route érronés donc page non trouvée (erreur 404) ou pour une route interdite (erreur 403), par exemple une route uniquement accessible par un administrateur du site, ces routes sont déclenchées en fonction de l'action de l'utilisateur sur le site
 
 # Pensez à bien controller et débuger les différentes routes déclarées
 
